@@ -10,11 +10,17 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node2D",
+"class": "ARoom",
+"language": "GDScript",
+"path": "res://Scripts/Room.gd"
+}, {
+"base": "Node2D",
 "class": "Weapon",
 "language": "GDScript",
-"path": "res://Scripts/Harpoon.gd"
+"path": "res://Scripts/Weapon.gd"
 } ]
 _global_script_class_icons={
+"ARoom": "",
 "Weapon": ""
 }
 
@@ -23,6 +29,12 @@ _global_script_class_icons={
 config/name="BallsDeep"
 run/main_scene="res://Scenes/Main.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/height=608
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
 
 [gui]
 
@@ -48,6 +60,11 @@ up={
 down={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+use_weapon={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
  ]
 }
 
